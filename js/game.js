@@ -173,8 +173,16 @@ form.addEventListener("submit", (e) => {
         // Increase tries count
         currentTries++;
 
-        // Get answer
+        // Get answer -> from string to int
         answer = parseInt(document.querySelector("#answer").value);
+
+        console.log(answer);
+
+        // If player didn't answer a number, it still counts as a try...
+        if (typeof(answer) != number) {
+            updateHealth(100-((currentTries - 1)/maxTries)*100);
+            transcript.innerHTML += "That was not a number... <br>";
+        }
     
         // User answer is too small
         if (answer < number) {
