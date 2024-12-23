@@ -179,7 +179,7 @@ form.addEventListener("submit", (e) => {
         console.log(answer);
 
         // If player didn't answer a number, it still counts as a try...
-        if (typeof(answer) != number) {
+        if (!Number.isInteger(answer)) {
             updateHealth(100-((currentTries - 1)/maxTries)*100);
             transcript.innerHTML += "That was not a number... <br>";
         }
