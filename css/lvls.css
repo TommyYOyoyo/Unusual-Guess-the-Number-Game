@@ -1,0 +1,265 @@
+/* ------------------ LEVELS STYLING ----------------- */
+
+/* Ensure everything takes 100% of the available space */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+============== UNFINISHED PART - PLEASE IGNORE ==================
+Boss fight roll away animation 
+@keyframes rollAway {
+    100% {
+        transform: translateX(-2000px) translateY(-1000px) rotateZ(-1280deg);
+    }
+}
+
+Boss fight roll aside animation
+@keyframes rollAside {
+    70% {
+        transform: translateX(-570px) translateY(80px) rotateZ(-810deg);
+    }
+    100% {
+        transform: translateX(-467px) translateY(130px) rotateZ(-540deg);
+    }
+}
+
+Boss fight title roll animation
+@keyframes titleRoll {
+    50% {
+        transform: translateX(-570px) translateY(80px) rotateZ(deg);
+    }
+    100% {
+        transform: translateX(-600px) translateY(20px) rotateZ(-480deg);
+    }
+}
+*/
+
+/* Homepage general styling */
+.lvls {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    /* Background image */
+    background-image: url("../assets/images/l1.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* General alignment */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* All text must be white with a default margin of 5px*/
+.lvls * {
+    margin: 5px;
+    color: white;
+}
+
+/* Title font styling */
+#title {
+    font-family: "Jacquard 12", system-ui;
+    font-size: 150px;
+}
+
+/* General question forms alignments */
+.form {
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid white;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+/* Font and relative positioning of items in the form styling + width */
+.form * {
+    margin: 10px;
+    padding: 10px;
+
+    font-family: "Jersey 20", sans-serif;
+    font-size: 25px;
+
+    width: 80%;
+    text-align: center;
+}
+
+/* Input box styling and width */
+.form input {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+}
+
+/* Submit button styling */
+#submit {
+    width: 150px;
+    height: 50px;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+/* Submit button on hover */
+#submit:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
+/* Text displaying status after submitting */
+#checkerText {
+    display: none;
+}
+
+/* Other options box styling */
+.otherOptions {
+    position: absolute;
+
+    bottom: 5%;
+    right: 0%;
+    width: 300px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Other options styling (mute, restart, main menu) */
+.otherOptions * {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* Mute button styling and positioning */
+#mute {
+    width: 50px;
+    height: 50px;
+
+    filter: invert(100%);
+}
+
+/* Return to main menu and restart styling */
+#returnToMainMenu,
+#restart {
+    height: 50px;
+    padding: 10px;
+
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Return to main menu button, restart button on hover*/
+#returnToMainMenu:hover,
+#restart:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+/* Mute button on hover */
+#mute:hover {
+    filter: invert(50%);
+    cursor: pointer;
+}
+
+/* Transcripts box general styling */
+.transcripts {
+    width: 300px;
+    height: 400px;
+
+    position: absolute;
+    left: 5%;
+    top: 53%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 3px solid white;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+/* Transcripts title styling */
+.transcripts h2 {
+    font-size: 50px;
+}
+
+/* Transcripts elements styling */
+.transcripts * {
+    padding: 10px;
+
+    font-family: "Jersey 20", sans-serif;
+    font-size: 25px;
+}
+
+/* Transcript paragraph styling (scroll box) */
+#transcript {
+    position: relative;
+    overflow: auto;
+
+    bottom: 10px;
+    height: 90%;
+    width: 90%;
+}
+
+/* Spritesheet canvas positioning */
+#canvas {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+/* Best result styling */
+#bestCount {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 30px;
+    font-family: "Jersey 20", sans-serif;
+}
+
+/* Healthbar container and healthbar styling */
+.healthBarContainer {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    right: 8%;
+    top: 70%;
+}
+/* Healthbar font */
+.healthBarContainer * {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 30px;
+}
+/* Healthbar styling */
+#healthbar {
+    width: 200px;
+    height: 30px;
+    background-color: red;
+}
