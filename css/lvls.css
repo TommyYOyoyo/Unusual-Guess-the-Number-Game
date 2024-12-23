@@ -68,6 +68,7 @@ Boss fight title roll animation
 #title {
     font-family: "Jacquard 12", system-ui;
     font-size: 150px;
+    text-shadow: 1px 1px 1px black;
 }
 
 /* General question forms alignments */
@@ -228,6 +229,7 @@ Boss fight title roll animation
     position: absolute;
     right: 0%;
     top: 0%;
+    /*background-color: rgba(0, 0, 0, 0.5)*/
 }
 
 /* Best result styling */
@@ -256,10 +258,29 @@ Boss fight title roll animation
 .healthBarContainer * {
     font-family: "Jersey 20", sans-serif;
     font-size: 30px;
+    text-shadow: 1px 1px 1px black;
 }
 /* Healthbar styling */
-#healthbar {
+progress {
     width: 200px;
-    height: 30px;
-    background-color: red;
+    height: 15px;
+    background: linear-gradient(90deg, rgb(91, 0, 0), rgb(255, 0, 0));
+    border: 1px solid white;
+    border-radius: 5px;
+}
+/* Healthbar color, for firefox */
+progress::-moz-progress-bar {
+    background: linear-gradient(90deg, rgb(0, 103, 80), rgb(2, 255, 200));
+    border-radius: 3px;  
+}
+/* Healthbar color and styling, for browsers like chrome*/
+/* Filled bar (left) */
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, rgb(0, 103, 80), rgb(2, 255, 200));
+    border-radius: 3px;
+}
+/* Unfilled bar (right) */
+progress::-webkit-progress-bar {
+    background: linear-gradient(90deg, rgb(91, 0, 0), rgb(255, 0, 0));
+    border-radius: 3px;
 }
