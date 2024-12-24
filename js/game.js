@@ -461,7 +461,7 @@ function bossFight() {
                         transcript.innerHTML += "You died. Game over.";
                         gameOver(number);       // Game over handler
                     }
-                }, 500);
+                }, 800);
             // If boss or player is dead, stop punching
             } else {
                 clearInterval(punchInterval);
