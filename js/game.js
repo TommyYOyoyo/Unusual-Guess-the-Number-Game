@@ -483,7 +483,7 @@ function takeHit(currentTries, maxTries) {
 
 // Function that updates health container's position according to player's position
 function updateHPContainerPosition() {
-    // Calculate the canvas's position relative to the player
+    // Calculate the canvas's position relatively to the player
     const canvasRect = canvas.getBoundingClientRect();
     const healthContainerX = canvasRect.left + player.x - healthContainer.offsetWidth / 2 - 5; // x absolute position - offset
     const healthContainerY = canvasRect.top + player.y - healthContainer.offsetHeight + 220; // y absolute position - offset
