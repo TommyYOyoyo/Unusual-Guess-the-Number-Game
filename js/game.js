@@ -326,7 +326,7 @@ function bestCountUpdater(currentCount, level) {
         bestResultCount.innerHTML = `Least tries: ${currentCount - 1}`;
     // Current record is better, set current record as best count
     } else if (currentCount - 1 < best) {
-        localStorage.setItem(`l${level}_bestCount`, currentCount - 1);
+        localStorage.setItem(`l${level}_bestCount`, currentCount);
         bestResultCount.innerHTML = `Least tries: ${currentCount - 1}`;
     }
 }
