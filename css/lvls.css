@@ -7,16 +7,15 @@ body {
     height: 100%;
 }
 
-/* 
-============== UNFINISHED PART - PLEASE IGNORE ==================
-Boss fight roll away animation 
+
+/* Boss fight roll away animation */ 
 @keyframes rollAway {
     100% {
         transform: translateX(-2000px) translateY(-1000px) rotateZ(-1280deg);
     }
 }
 
-Boss fight roll aside animation
+/* Boss fight roll aside animation */
 @keyframes rollAside {
     70% {
         transform: translateX(-570px) translateY(80px) rotateZ(-810deg);
@@ -26,7 +25,7 @@ Boss fight roll aside animation
     }
 }
 
-Boss fight title roll animation
+/* Boss fight title roll animation */
 @keyframes titleRoll {
     50% {
         transform: translateX(-570px) translateY(80px) rotateZ(deg);
@@ -35,7 +34,13 @@ Boss fight title roll animation
         transform: translateX(-600px) translateY(20px) rotateZ(-480deg);
     }
 }
-*/
+
+/* End of boss fight: reverse-titleRoll animation to put back title into its original position */
+@keyframes reverseTitleRoll {
+    100% {
+        transform: translateX(0px) translateY(-20px) rotateZ(360deg);
+    }
+}
 
 /* Homepage general styling */
 .lvls {
@@ -229,7 +234,6 @@ Boss fight title roll animation
     position: absolute;
     right: 0%;
     top: 0%;
-    /*background-color: rgba(0, 0, 0, 0.5)*/
 }
 
 /* Best result styling */
@@ -251,8 +255,8 @@ Boss fight title roll animation
     align-items: center;
     flex-direction: column;
 
-    right: 8%;
-    top: 70%;
+    left: 1100px;
+    top: 550px;
 }
 /* Healthbar font */
 .healthBarContainer * {

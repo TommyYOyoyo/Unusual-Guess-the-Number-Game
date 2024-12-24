@@ -25,13 +25,13 @@ function handleMute(muteButton, music, paused) {
 // Handling the "return to main menu" button
 function handleReturnToMain(btn) {
     btn.addEventListener("click", () => {
-        window.location.href = "../html/homepage.html";
+        window.location.href = "../html/homepage.html"; // Return to main menu
     });
 }
 
 // Handling the "restart" button
 function handleRestart(btn) {
     btn.addEventListener("click", () => {
-        window.location.reload();
+        window.location.reload();   // Restart level
     });
 }
