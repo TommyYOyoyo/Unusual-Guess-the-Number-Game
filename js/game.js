@@ -426,8 +426,7 @@ function bossFight() {
             canvas.width++; // Canvas enlarging
 
             // Move healthbar and health value along with the player
-            healthContainer.style.left = `${(currentHPContainerx -= 0.8)}px`;
-            healthContainer.style.top = `${(currentHPContainery += 0.2)}px`;
+            updateHPContainerPosition();
 
             if (boss.x <= canvas.width / 1.75) {
                 // Stop interval once boss reaches the destination x
@@ -455,7 +454,7 @@ function bossFight() {
         // Boss attacks, interval per attack per window session is randomized
         let punchInterval = setInterval(() => {
             // If boss is not dead and player is not dead
-            if (!boss.dead && !player.hp <= 0) {
+            if (!boss.dead && player.hp > 0) {
                 boss.switchState(2); // Attack animation
                 setTimeout(() => {
                     takeHit(currentTries, maxTries); // Player takes hit
@@ -484,11 +483,11 @@ function takeHit(currentTries, maxTries) {
 
 // Function that updates health container's position according to player's position
 function updateHPContainerPosition() {
-    // Calculate the player's position relatively to the canvas
+    // Calculate the canvas's position relative to the player
     const canvasRect = canvas.getBoundingClientRect();
-    const healthContainerX = canvasRect.left + player.x / 2;
-    const healthContainerY = canvasRect.top + player.y + 150;
-    // Update health bar position according to player's position in the canvas
+    const healthContainerX = canvasRect.left + player.x - healthContainer.offsetWidth / 2 - 5; // x absolute position - offset
+    const healthContainerY = canvasRect.top + player.y - healthContainer.offsetHeight + 220; // y absolute position - offset
+    // Update health bar position
     healthContainer.style.left = `${healthContainerX}px`;
     healthContainer.style.top = `${healthContainerY}px`;
 }
