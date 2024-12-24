@@ -286,8 +286,7 @@ function win(tries) {
     victorySound.play(); // Victory sound effect
     // Victory text displays, all others are hidden
     canvas.style.display = "none";
-    healthBar.style.display = "none";
-    healthValue.style.display = "none";
+    healthContainer.style.display = "none";
     form.style.display = "none";
     transcripts.style.display = "none";
     title.innerHTML = `You win! Congratulations! <br> Tries: ${tries}`;
@@ -308,8 +307,7 @@ function gameOver(correctNumber) {
         gameOverSound.play(); // Game over sound effect
         // Game over text displays, all others are hidden
         canvas.style.display = "none";
-        healthBar.style.display = "none";
-        healthValue.style.display = "none";
+        healthContainer.style.display = "none";
         form.style.display = "none";
         transcripts.style.display = "none";
         title.style.color = "rgb(255, 66, 66)";
