@@ -198,6 +198,9 @@ const player = new Samurai({
     scale: 6,
 });
 
+// Update HP container according to player's position
+updateHPContainerPosition();
+
 // Play the right music
 music.loop = true;
 music.play();
@@ -477,4 +480,15 @@ function takeHit(currentTries, maxTries) {
     // Update healthbar and trigger player animation
     updateHealth(player.hp);
     console.log(`Current health: ${player.hp}%, try #${currentTries - 1}`);
+}
+
+// Function that updates health container's position according to player's position
+function updateHPContainerPosition() {
+    // Calculate the player's position relatively to the canvas
+    const canvasRect = canvas.getBoundingClientRect();
+    const healthContainerX = canvasRect.left + player.x / 2;
+    const healthContainerY = canvasRect.top + player.y + 150;
+    // Update health bar position according to player's position in the canvas
+    healthContainer.style.left = `${healthContainerX}px`;
+    healthContainer.style.top = `${healthContainerY}px`;
 }
